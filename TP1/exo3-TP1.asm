@@ -1,0 +1,17 @@
+#R = (A + B) ? C avec A = 10, B = 8 et C = 5.
+.text 
+.global main
+main:
+
+li $t0,10
+li $t1,8
+li $t2,5
+add $t3,$t0,$t1
+sub $t4,$t3,$t2
+
+move $a0,$t4
+li $v0,1
+syscall
+
+li $v0,10
+syscall
